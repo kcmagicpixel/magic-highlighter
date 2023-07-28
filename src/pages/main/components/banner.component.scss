@@ -1,0 +1,53 @@
+#banner {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin-bottom: 2rem;
+  padding: 1rem;
+  border-radius: var(--border-radius);
+  transition: opacity 400ms;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &.danger {
+    --local-backgound: var(--color-danger);
+    --local-color: var(--color-danger-contrast);
+  }
+
+  &.warning {
+    --local-backgound: var(--color-warning);
+    --local-color: var(--color-warning-contrast);
+  }
+
+  &.success {
+    --local-backgound: var(--color-success);
+    --local-color: var(--color-success-contrast);
+  }
+
+  &.info {
+    --local-backgound: var(--color-dark);
+    --local-color: var(--color-dark-contrast);
+  }
+
+  & {
+    background-color: var(--local-backgound);
+    color: var(--local-color);
+  }
+
+  &.hidden {
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  & > span {
+    flex: 1;
+  }
+
+  & > button {
+    flex: 0;
+    color: var(--local-backgound);
+    background-color: var(--local-color);
+  }
+}
